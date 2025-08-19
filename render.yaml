@@ -5,6 +5,7 @@ services:
     plan: free
     buildCommand: pip install -r requirements.txt
     startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    pythonVersion: 3.11.9   # 👈 именно это укажет Render правильный Python
     envVars:
       - key: TELEGRAM_TOKEN
         sync: false
@@ -12,4 +13,3 @@ services:
         generateValue: true
       - key: PROZORRO_API_BASE
         value: https://public.api.openprocurement.org/api/2.5
-    pythonVersion: 3.11.9
