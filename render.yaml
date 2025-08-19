@@ -5,7 +5,7 @@ services:
     plan: free
     buildCommand: pip install -r requirements.txt
     startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
-    pythonVersion: 3.11.9   # 👈 именно это укажет Render правильный Python
+    pythonVersion: 3.11.9 
     envVars:
       - key: TELEGRAM_TOKEN
         sync: false
