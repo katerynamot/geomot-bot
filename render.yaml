@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: geomot-bot
+    env: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: TELEGRAM_TOKEN
+        sync: false          # задашь в Render вручную
+      - key: WEBHOOK_SECRET
+        generateValue: true  # Render сгенерирует уникальное значение
+      - key: PROZORRO_API_BASE
+        value: https://public.api.openprocurement.org/api/2.5
