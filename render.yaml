@@ -12,4 +12,4 @@ services:
         generateValue: true
       - key: PROZORRO_API_BASE
         value: https://public.api.openprocurement.org/api/2.5
-    pythonVersion: 3.11.9   # 👈 вот это добавь
+    pythonVersion: 3.11.9
